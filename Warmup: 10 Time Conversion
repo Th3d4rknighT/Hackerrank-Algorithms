@@ -1,0 +1,29 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        String time = in.next();
+        if(time.charAt(8)=='A'&&time.charAt(0)!='1'&&time.charAt(1)!='2')
+        {
+            System.out.println(time.substring(0,8));
+        }
+        else if(time.charAt(8)=='A'&&time.charAt(0)=='1'&&time.charAt(1)=='2')
+        {
+            System.out.println("00"+time.substring(2,8));
+        }
+        else
+        {
+            
+            int ch=Integer.parseInt(time.substring(0, 2));
+            if(ch!=12){
+            ch=ch+12;}
+            System.out.print(ch+time.substring(2,8));
+        }
+    }
+}
